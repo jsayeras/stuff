@@ -1,6 +1,6 @@
 
 create-cluster:
-	kind create cluster --name local --config kindconfig.yml
+	kind create cluster --name local --config kind-config.yml
 
 delete-cluster:
 	kind delete cluster --name local
