@@ -7,10 +7,10 @@ containerdConfigPatches:
 nodes:
 - role: control-plane
   image: kindest/node:v1.26.3@sha256:61b92f38dff6ccc29969e7aa154d34e38b89443af1a2c14e6cfbd2df6419c66f
-  extraPortMappings:
-  - containerPort: 31234
-    hostPort: 8080
-    protocol: TCP
+  #extraPortMappings:
+  #- containerPort: 31234
+  #  hostPort: 8080
+  #  protocol: TCP
   kubeadmConfigPatches:
   - |
     kind: ClusterConfiguration
@@ -22,7 +22,7 @@ nodes:
   image: kindest/node:v1.26.3@sha256:61b92f38dff6ccc29969e7aa154d34e38b89443af1a2c14e6cfbd2df6419c66f
   extraPortMappings:
   - containerPort: 31234
-    hostPort: 8081
+    hostPort: 8080
     protocol: TCP
 networking:
   podSubnet: "10.244.0.0/16"

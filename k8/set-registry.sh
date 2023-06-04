@@ -1,4 +1,4 @@
-reg_name='registry-registry'
+reg_name='kind-registry'
 reg_port='5001'
 
 if [ "$(docker inspect -f '{{.State.Running}}' "${reg_name}" 2>/dev/null || true)" != 'true' ]; then
